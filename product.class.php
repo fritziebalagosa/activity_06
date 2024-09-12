@@ -12,7 +12,7 @@ class Product {
     public $category_id = '';      // The category the product belongs to.
     public $price = '';         // The price of the product.
 
-    //properties for stock table
+    //properties for stock tables
     public $quantity = '';
     public $status = '';
 
