@@ -23,23 +23,7 @@ class Product {
         $this->db = new Database(); // Instantiate the Database class.
     }
 
-    // The add() method is used to add a new product to the database.
-    /* function add() {
-        // SQL query to insert a new product into the 'product' table.
-        $sql = "INSERT INTO product (code, name, category_id, price) VALUES (:code, :name, :category_id, :price);";
 
-        // Prepare the SQL statement for execution.
-        $query = $this->db->connect()->prepare($sql);
-
-        // Bind the product properties to the named placeholders in the SQL statement.
-        $query->bindParam(':code', $this->code);
-        $query->bindParam(':name', $this->name);
-        $query->bindParam(':category_id', $this->category_id);
-        $query->bindParam(':price', $this->price);
-
-        // Execute the query. If successful, return true; otherwise, return false.
-        return $query->execute();
-    } */
 
     function add() {
         // SQL query to insert a new product into the 'product' table.
@@ -157,20 +141,7 @@ class Product {
         return $data; // Return the fetched data.
     }
 
-    // The delete() method removes a product from the database based on its ID.
-    /* function delete($recordID) {
-        // SQL query to delete a product by its ID.
-        $sql = "DELETE FROM product WHERE id = :recordID;";
-
-        // Prepare the SQL statement for execution.
-        $query = $this->db->connect()->prepare($sql);
-
-        // Bind the recordID parameter to the SQL query.
-        $query->bindParam(':recordID', $recordID);
-        
-        // Execute the query. If successful, return true; otherwise, return false.
-        return $query->execute();
-    } */
+    
 
     function delete($recordID, $productCode) {
         // SQL query to delete product stock by its Code.
